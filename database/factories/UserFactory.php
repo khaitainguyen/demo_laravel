@@ -16,6 +16,25 @@ use Illuminate\Support\Str;
 | model instances for testing / seeding your application's database.
 |
 */
+protected $model = User::class;
+
+public function configure(){
+	
+        return $this->afterMaking(function (User $user) {
+            //
+        })->afterCreating(function (User $user) {
+            //
+        });
+    }
+
+public function suspended()
+	{
+    return $this->state(function (array $attributes) {
+        return [
+            'account_status' => 'suspended',
+        ];
+    });
+}
 
 $factory->define(User::class, function (Faker $faker) {
     return [
