@@ -13,7 +13,7 @@
 
  @endif
  <div style="padding: 20px">
-     <a href="{{ url("/backend/product/create")}}" class="btn btn-info">Ten san pham</a>
+     <a href="{{ url("/backend/product/create")}}" class="btn btn-info">Them san pham</a>
  </div>
 
  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
